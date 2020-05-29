@@ -2,7 +2,7 @@
 
 import React from "react";
 import { TouchableOpacity, StyleSheet } from "react-native";
-import AppText from "../primitives/AppText";
+import { AppText } from "../primitives";
 
 function PickerItem({ item, onPress }) {
   return (

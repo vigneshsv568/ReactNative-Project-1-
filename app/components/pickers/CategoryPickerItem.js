@@ -3,8 +3,7 @@
 import React from "react";
 import { TouchableOpacity, StyleSheet } from "react-native";
 
-import AppText from "../primitives/AppText";
-import AppIcon from "../primitives/AppIcon";
+import { AppText, AppIcon } from "../primitives";
 
 function CategoryPickerItem({ item, onPress }) {
   return (

@@ -8,8 +8,8 @@ import {
   SubmitButton,
   AppFormPicker,
 } from "../components/forms";
-import Screen from "../components/Screen";
-import CategoryPickerItem from "../components/pickers/CategoryPickerItem";
+import Screen from "../screens/Screen";
+import { CategoryPickerItem } from "../components/pickers";
 
 const validationSchema = Yup.object().shape({
   title: Yup.string().required().min(1).label("Title"),

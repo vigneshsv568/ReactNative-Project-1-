@@ -1,0 +1,31 @@
+import React from "react";
+import { View, StyleSheet, Image, TouchableOpacity } from "react-native";
+
+import LoginForm from "../components/LoginForm";
+
+function LoginScreen(props) {
+  return (
+    <View style={styles.container}>
+      <View style={styles.headerContainer}>
+        <Image source={require("../assets/logo-red.png")} style={styles.logo} />
+      </View>
+      <LoginForm />
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    padding: 10,
+  },
+  loginForm: { width: "100%", marginTop: 35 },
+  logo: {
+    width: 80,
+    height: 80,
+    alignSelf: "center",
+    marginTop: 50,
+    marginBottom: 10,
+  },
+});
+
+export default LoginScreen;

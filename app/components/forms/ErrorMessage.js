@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet } from "react-native";
 
-import AppText from "../primitives/AppText";
+import { AppText } from "../primitives";
 
 function ErrorMessage({ error, visible }) {
   if (error && visible) return <AppText style={styles.error}>{error}</AppText>;
