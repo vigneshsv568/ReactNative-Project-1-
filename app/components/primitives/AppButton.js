@@ -1,12 +1,12 @@
 import React from "react";
-import { Text, StyleSheet, TouchableOpacity } from "react-native";
+import { Text, StyleSheet, TouchableOpacity, Image } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import defaultStyles from "../../config/styles";
 
-function AppButton({ title, onPress, styleButton, styleText, icon }) {
+function AppButton({ title, onPress, styleButton, styleText, icon, image }) {
   return (
     <TouchableOpacity
-      style={[defaultStyles.buttons, { marginVertical: 10 }, styleButton]}
+      style={[defaultStyles.buttons, styles.button, styleButton]}
       onPress={onPress}
     >
       {icon && (
@@ -17,6 +17,12 @@ function AppButton({ title, onPress, styleButton, styleText, icon }) {
           size={icon.size}
         />
       )}
+      {image && (
+        <Image
+          source={image}
+          style={{ width: 25, height: 20, marginRight: 5 }}
+        />
+      )}
       <Text style={[defaultStyles.text, styles.text, styleText]}>{title}</Text>
     </TouchableOpacity>
   );
@@ -25,6 +31,10 @@ function AppButton({ title, onPress, styleButton, styleText, icon }) {
 // Define a standard style for the buttons here.
 // This will be same across the app for consistency
 const styles = StyleSheet.create({
+  button: {
+    marginVertical: 10,
+    borderRadius: 25,
+  },
   text: {
     color: defaultStyles.colors.white,
     fontSize: 18,

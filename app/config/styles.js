@@ -5,7 +5,7 @@ export default {
   colors,
   text: {
     color: colors.dark,
-    fontSize: 18,
+    fontSize: 16,
     ...Platform.select({
       ios: {
         fontFamily: "Avenir",
@@ -16,7 +16,7 @@ export default {
     }),
   },
   buttons: {
-    borderRadius: 25,
+    borderRadius: 5,
     justifyContent: "center",
     alignItems: "center",
     padding: 10,
@@ -26,11 +26,16 @@ export default {
   iconButton: {
     backgroundColor: "dodgerblue",
     borderRadius: 5,
-    justifyContent: "center",
-    alignItems: "center",
     padding: 10,
     width: "40%",
     flexDirection: "row",
-    margin: 15,
+    margin: 5,
+  },
+  appTextInputContainer: {
+    backgroundColor: colors.light,
+    borderRadius: 5,
+    flexDirection: "row",
+    padding: 15,
+    marginVertical: 10,
   },
 };

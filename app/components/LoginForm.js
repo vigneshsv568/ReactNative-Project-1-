@@ -51,9 +51,7 @@ function LoginForm(props) {
       >
         <AppText
           style={{
-            fontSize: 20,
             color: defaultStyles.colors.secondary,
-            fontWeight: "bold",
           }}
         >
           Dont have an account? Signup
@@ -68,7 +66,7 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     marginTop: 30,
   },
-  loginForm: { width: "100%", marginTop: 35 },
+  loginForm: { width: "100%", marginTop: 25 },
 });
 
 export default LoginForm;

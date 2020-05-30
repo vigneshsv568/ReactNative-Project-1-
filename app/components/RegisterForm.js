@@ -61,9 +61,7 @@ function RegisterForm(props) {
       >
         <AppText
           style={{
-            fontSize: 20,
             color: defaultStyles.colors.secondary,
-            fontWeight: "bold",
           }}
         >
           Already a memebr? Signin
@@ -78,7 +76,7 @@ const styles = StyleSheet.create({
     alignSelf: "center",
     marginTop: 15,
   },
-  registerForm: { width: "100%", marginTop: 35 },
+  registerForm: { width: "100%", marginTop: 25 },
 });
 
 export default RegisterForm;

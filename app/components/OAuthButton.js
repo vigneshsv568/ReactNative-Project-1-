@@ -18,11 +18,13 @@ function OAuthButton({
         <AppButton
           title="Google"
           onPress={() => console.log("Login with google")}
-          icon={{ name: "google", color: "white", size: 20 }}
-          styleButton={defaultStyles.iconButton}
+          image={require("../assets/google-signin-light.png")}
+          styleButton={[
+            defaultStyles.iconButton,
+            { backgroundColor: defaultStyles.colors.googleBlue },
+          ]}
           styleText={{
             color: "white",
-            fontWeight: "bold",
             textTransform: "none",
           }}
         />
@@ -32,10 +34,12 @@ function OAuthButton({
           title="Facebook"
           onPress={() => console.log("Login with facebook")}
           icon={{ name: "facebook-box", color: "white", size: 20 }}
-          styleButton={defaultStyles.iconButton}
+          styleButton={[
+            defaultStyles.iconButton,
+            { backgroundColor: defaultStyles.colors.fb },
+          ]}
           styleText={{
             color: "white",
-            fontWeight: "bold",
             textTransform: "none",
           }}
         />
@@ -45,10 +49,12 @@ function OAuthButton({
           title="Instagram"
           onPress={() => console.log("Login with Instagram")}
           icon={{ name: "instagram", color: "white", size: 20 }}
-          styleButton={defaultStyles.iconButton}
+          styleButton={[
+            defaultStyles.iconButton,
+            { backgroundColor: "#8a3ab9" },
+          ]}
           styleText={{
             color: "white",
-            fontWeight: "bold",
             textTransform: "none",
           }}
         />
@@ -58,10 +64,12 @@ function OAuthButton({
           title="LinkedIn"
           onPress={() => console.log("Login with LinkedIn")}
           icon={{ name: "linkedin-box", color: "white", size: 20 }}
-          styleButton={defaultStyles.iconButton}
+          styleButton={[
+            defaultStyles.iconButton,
+            { backgroundColor: defaultStyles.colors.linkedInBlue },
+          ]}
           styleText={{
             color: "white",
-            fontWeight: "bold",
             textTransform: "none",
           }}
         />
@@ -71,10 +79,12 @@ function OAuthButton({
           title="Twitter"
           onPress={() => console.log("Login with Twitter")}
           icon={{ name: "twitter-circle", color: "white", size: 20 }}
-          styleButton={defaultStyles.iconButton}
+          styleButton={[
+            defaultStyles.iconButton,
+            { backgroundColor: defaultStyles.colors.twitterBlue },
+          ]}
           styleText={{
             color: "white",
-            fontWeight: "bold",
             textTransform: "none",
           }}
         />
@@ -84,10 +94,12 @@ function OAuthButton({
           title="GitHub"
           onPress={() => console.log("Login with GitHub")}
           icon={{ name: "github-circle", color: "white", size: 20 }}
-          styleButton={defaultStyles.iconButton}
+          styleButton={[
+            defaultStyles.iconButton,
+            { backgroundColor: defaultStyles.colors.githubBlack },
+          ]}
           styleText={{
             color: "white",
-            fontWeight: "bold",
             textTransform: "none",
           }}
         />

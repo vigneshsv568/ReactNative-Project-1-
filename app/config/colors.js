@@ -7,4 +7,9 @@ export default {
   light: "#f8f4f4",
   dark: "#0c0c0c",
   danger: "#ff5252",
+  fb: "#3b5998",
+  googleBlue: "#4885ed",
+  linkedInBlue: "#0072b1",
+  twitterBlue: "#00aced",
+  githubBlack: "#211F1F",
 };
