@@ -1,8 +1,8 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
 
-import { AppButton } from "./primitives";
-import defaultStyles from "../config/styles";
+import { AppButton } from "../primitives";
+import defaultStyles from "../../config/styles";
 
 function OAuthButton({
   google,
@@ -18,7 +18,7 @@ function OAuthButton({
         <AppButton
           title="Google"
           onPress={() => console.log("Login with google")}
-          image={require("../assets/google-signin-light.png")}
+          image={require("../../assets/google-signin-light.png")}
           styleButton={[
             defaultStyles.iconButton,
             { backgroundColor: defaultStyles.colors.googleBlue },

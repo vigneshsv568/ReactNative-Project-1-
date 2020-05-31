@@ -2,35 +2,25 @@ import React from "react";
 import { View, StyleSheet, TouchableOpacity } from "react-native";
 import * as Yup from "yup";
 
-import { AppText } from "./primitives";
-import { AppForm, AppFormField, SubmitButton } from "./forms";
+import { AppText } from "../primitives";
+import { AppForm, AppFormField, SubmitButton } from "../forms";
 import OAuthButton from "./OAuthButton";
-import defaultStyles from "../config/styles";
+import defaultStyles from "../../config/styles";
 
 const validationSchema = Yup.object().shape({
-  name: Yup.string().required().label("Name"),
   email: Yup.string().required().email().label("Email"),
   password: Yup.string().required().min(4).label("Password"),
 });
 
-function RegisterForm(props) {
+function LoginForm(props) {
   return (
     <>
-      <View style={styles.registerForm}>
+      <View style={styles.loginForm}>
         <AppForm
-          initialValues={{ name: "", email: "", password: "" }}
+          initialValues={{ email: "", password: "" }}
           onSubmit={(values) => console.log(values)}
           validationSchema={validationSchema}
         >
-          <AppFormField
-            name="name"
-            placeholder="Name"
-            icon="account"
-            autoCapitalize="none"
-            autoCorrect={false}
-            keyboardType="default"
-            textContentType="name"
-          />
           <AppFormField
             name="email"
             placeholder="Email"
@@ -49,7 +39,7 @@ function RegisterForm(props) {
             secureTextEntry
             textContentType="password"
           />
-          <SubmitButton title="Register" />
+          <SubmitButton title="Login" />
         </AppForm>
       </View>
       <View>
@@ -64,7 +54,7 @@ function RegisterForm(props) {
             color: defaultStyles.colors.secondary,
           }}
         >
-          Already a memebr? Signin
+          Dont have an account? Signup
         </AppText>
       </TouchableOpacity>
     </>
@@ -74,9 +64,9 @@ function RegisterForm(props) {
 const styles = StyleSheet.create({
   footerText: {
     alignSelf: "center",
-    marginTop: 15,
+    marginTop: 30,
   },
-  registerForm: { width: "100%", marginTop: 25 },
+  loginForm: { width: "100%", marginTop: 25 },
 });
 
-export default RegisterForm;
+export default LoginForm;

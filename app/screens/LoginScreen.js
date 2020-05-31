@@ -1,7 +1,7 @@
 import React from "react";
-import { View, StyleSheet, Image, TouchableOpacity } from "react-native";
+import { View, StyleSheet, Image } from "react-native";
 
-import LoginForm from "../components/LoginForm";
+import { LoginForm } from "../components/authForms";
 
 function LoginScreen(props) {
   return (

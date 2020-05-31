@@ -1,7 +1,7 @@
 import React from "react";
 import { View, StyleSheet, Image } from "react-native";
 
-import RegisterForm from "../components/RegisterForm";
+import { RegisterForm } from "../components/authForms";
 
 function RegisterScreen(props) {
   return (
